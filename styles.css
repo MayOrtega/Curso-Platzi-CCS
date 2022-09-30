@@ -7,6 +7,15 @@ body{
     place-items: center;
 }
 
+h1{
+    text-align: center;
+}
+
+
+.total-count{
+    z-index: 11;
+}
+
 input:checked{
     counter-increment: game;
 }
@@ -14,6 +23,8 @@ input:checked{
 .total-count::after{
     content: counter(game);
 }
+
+
 
 .phone{
     position: relative;
@@ -39,7 +50,28 @@ input:checked{
     animation-iteration-count: infinite;
 }
 
-.layer-1 input[type=checkbox]
+ .shield[type=checkbox]{
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+}
+
+@keyframes layer {
+    0%{
+        bottom: 0;
+        
+    }
+    25%{
+        bottom: -80px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
 
 .left-ear--outer{
     background-color: white;
@@ -133,7 +165,13 @@ input:checked{
     width: 70px;
     bottom: 0;
     left: 60px;
+    animation-name: layer;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
+
+
 
 .left-ear--outer2{
     background-color: white;
@@ -218,6 +256,7 @@ input:checked{
     border-radius: 20px;
     background-color: rgb(188, 128, 53);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
+    
 }
 
 /* Conejo 3 */
@@ -229,7 +268,24 @@ input:checked{
     margin: 0 auto;
     width: 70px;
     height: 260px;
+    animation-name: layer2;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
    
+}
+
+@keyframes layer2 {
+    0%{
+        top: 250px;
+        
+    }
+    25%{
+        top: 310px;
+    }
+    100%{
+        top: 250px;
+    }
 }
 
 
@@ -327,7 +383,24 @@ input:checked{
     margin: 0 auto;
     width: 70px;
     height: 190px;
+    animation-name: layer3;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     
+}
+
+@keyframes layer3 {
+    0%{
+        top: 330px;
+        
+    }
+    25%{
+        top: 380px;
+    }
+    100%{
+        top: 330px;
+    }
 }
 
 .left-ear--outer4{
